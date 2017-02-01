@@ -17,14 +17,16 @@
     </div>
 
     <div id="root">
-
         <form @submit.prevent="submitTodo(todo)">
             <input type="text" v-model="todo">
         </form>
 
         <div class="todos">
-            <ul v-for="todo in todos">
-                <li>{{todo}}</li>
+            <ul v-for="(item, index) in todos">
+                <li :class="{completed:item.completed}" @click="completedTodo(item)"> 
+                    {{item.task}} is at index {{index}}
+                    <!--<button type="button" @click="removeItem(item)" >Complted!</button>-->
+                </li>
             </ul>
         </div>
 

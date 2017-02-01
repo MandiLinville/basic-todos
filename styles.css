@@ -8,3 +8,7 @@ img{
 form{
     text-align: center; 
 }
+
+.completed{
+    text-decoration: line-through
+}
